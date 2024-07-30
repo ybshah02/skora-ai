@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Template</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FFF;
+            margin: 0;
+            padding: 0;
+        }
+        .cv-container {
+            width: 768px;
+            margin: auto;
+            background-color: #FFF;
+            color: #333;
+        }
+        .header {
+            background-color: #FF4100;
+            color: #FFF;
+            padding: 20px;
+            text-align: center;
+        }
+        .profile-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .profile-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #FFF;
+            object-fit: cover;
+        }
+        .profile-details {
+            text-align: right;
+        }
+        .profile-details h1 {
+            margin: 0;
+        }
+        .section {
+            padding: 20px;
+            border-bottom: 2px solid #F1F1F1;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .column {
+            display: flex;
+            justify-content: space-between;
+        }
+        .column div {
+            width: 48%;
+        }
+        .personal-summary {
+            background-color: #F9F9F9;
+            padding: 20px;
+            font-style: italic;
+        }
+        .skills, .education, .languages, .awards, .references, .statistics {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer {
+            background-color: #333;
+            color: #FFF;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <div class="header">
+            <div class="profile-section">
+                <img src="{{ profile_photo }}" alt="Profile Photo">
+                <div class="profile-details">
+                    <h1>{{ name }}</h1>
+                    <p>Nationality: {{ nationality }}</p>
+                    <p>Residence: {{ residence }}</p>
+                    <p>Age: {{ age }}</p>
+                    <p>Date of Birth: {{ date_of_birth }}</p>
+                    <p>Social Media Links: {{ social_media_links }}</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="personal-summary">
+            <p>{{ personal_summary }}</p>
+        </div>
+
+        <div class="section column">
+            <div>
+                <h2>Physical Attributes</h2>
+                <ul class="attributes">
+                    {% for attribute in physical_attributes %}
+                    <li>{{ attribute.attribute }}: {{ attribute.value }}</li>
+                    {% endfor %}
+                </ul>
+
+                <h2>Skills</h2>
+                <ul class="skills">
+                    {% for skill in skills %}
+                    <li>{{ skill.skill }}: {{ skill.description }}</li>
+                    {% endfor %}
+                </ul>
+
+                <h2>Statistics</h2>
+                <ul class="statistics">
+                    {% for statistic in statistics %}
+                    <li>{{ statistic.statistic }}: {{ statistic.value }}</li>
+                    {% endfor %}
+                </ul>
+
+                <h2>Education</h2>
+                <ul class="education">
+                    {% for education in education %}
+                    <li>{{ education.institution }}: {{ education.degree }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>
+                <h2>Club Experiences</h2>
+                <ul class="club-experiences">
+                    {% for experience in club_experiences %}
+                    <li>{{ experience.club_name }} - {{ experience.year }}: {{ experience.details }}</li>
+                    {% endfor %}
+                </ul>
+
+                <h2>Awards</h2>
+                <ul class="awards">
+                    {% for award in awards %}
+                    <li>{{ award.award }} - {{ award.year }}</li>
+                    {% endfor %}
+                </ul>
+
+                <h2>References</h2>
+                <ul class="references">
+                    {% for reference in references %}
+                    <li>{{ reference.name }}: {{ reference.contact }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <img src="{{ logo }}" alt="Skora Logo" height="30">
+        </div>
+    </div>
+</body>
+</html>

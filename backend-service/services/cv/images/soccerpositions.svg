@@ -1,0 +1,27 @@
+<svg width="234" height="216" viewBox="0 0 234 216" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="232" height="214" stroke="black" stroke-width="2"/>
+<rect x="39" y="154" width="156" height="61" stroke="black" stroke-width="2"/>
+<rect x="67" y="178" width="100" height="37" stroke="black" stroke-width="2"/>
+<path d="M132 154C132 149.117 125.284 145 117 145C108.716 145 102 149.117 102 154" stroke="black" stroke-width="2"/>
+<path d="M145 1C145 16.464 132.464 29.5 117 29.5C101.536 29.5 89 16.464 89 0.999995C110.674 0.999997 122.826 0.999998 144.5 1" stroke="black" stroke-width="2"/>
+<circle cx="117" cy="14" r="7.5" stroke="black"/>
+<circle cx="117" cy="14" r="2.5" stroke="black" stroke-width="5"/>
+<circle cx="38" cy="14" r="7.5" stroke="black"/>
+<circle cx="38" cy="14" r="2.5" stroke="black" stroke-width="5"/>
+<circle cx="196" cy="14" r="7.5" stroke="black"/>
+<circle cx="196" cy="14" r="2.5" stroke="black" stroke-width="5"/>
+<circle cx="117" cy="87" r="7.5" stroke="black"/>
+<circle cx="117" cy="87" r="2.5" stroke="black" stroke-width="5"/>
+<circle cx="38" cy="87" r="7.5" stroke="black"/>
+<circle cx="38" cy="87" r="2.5" stroke="black" stroke-width="5"/>
+<circle cx="196" cy="87" r="7.5" stroke="black"/>
+<circle cx="196" cy="87" r="2.5" stroke="black" stroke-width="5"/>
+<circle cx="117" cy="166" r="7.5" stroke="black"/>
+<circle cx="117" cy="166" r="2.5" stroke="black" stroke-width="5"/>
+<circle cx="117" cy="203" r="7.5" stroke="black"/>
+<circle cx="117" cy="203" r="2.5" stroke="black" stroke-width="5"/>
+<circle cx="22" cy="166" r="7.5" stroke="black"/>
+<circle cx="22" cy="166" r="2.5" stroke="black" stroke-width="5"/>
+<circle cx="212" cy="166" r="7.5" stroke="black"/>
+<circle cx="212" cy="166" r="2.5" stroke="black" stroke-width="5"/>
+</svg>

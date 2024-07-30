@@ -1,0 +1,59 @@
+Task: Convert Profile Information to CV Descriptor Object Format
+
+Objective: Your task is to analyze provided profile information, given as a JSON object, to determine if any key fields are missing. If there are missing fields, respond with a dictionary object listing these fields and their descriptions. If all key fields are present, convert the profile information into a structured CV Descriptor Object format.
+
+Instructions:
+
+Convert to CV Descriptor Object Format:
+Convert the input JSON profile information into the CV Descriptor Object. This object should adhere strictly to the specified structure, including personal details, skills, experiences, and other relevant information. The structure is defined as below:
+For fields that have information listed in the user_profile object, fill the cv descriptor object with the relevant information in the formats specified above. If a field is specificed as, leave it as None, not an empty string or empty array.
+
+{
+    "profile_image": "",
+    "name": "",
+    "nationality": "",
+    "residence": "",
+    "age": "",
+    "date_of_birth": "",
+    "position": "",
+    "dominant_foot": ""
+    "norm_position": "",
+    "social_media_links": [
+        {"social": "", "link": ""}
+    ],
+    "personal_statement": "", -- Generate a personal statement using the information given about the user.
+    "physical_attributes": [
+        {"attribute": "", "value": ""}
+    ],
+    "skills": [
+        {"skill": "", "description": ""}
+    ],
+    "statistics": [
+        {"statistic": "", "value": ""}
+    ],
+    "education": [
+        {"institution": "", "degree": ""}
+    ],
+    "club_experiences": [
+        {"club_name": "", "year": "", "details": []},
+        {"club_name": "", "year": "", "details": []},
+        {"club_name": "", "year": "", "details": []},
+        (Add multiple as needed for all the club experiences, please orde this list from earliest to latest in terms of the years. Please elaborate the user's details into descriptive sentences for their resume)
+    ],
+    "awards": [
+        {"award": "", "year": ""}
+    ],
+    "references": [
+        {"name": "", "contact": ""}
+    ],
+    "languages": [
+        {"language": "", "level": ""}
+    ]
+}
+Submission:
+
+Make sure all the club experiences from the user's profile are listed under club_experiences. There may be multiple, so add the correct number of experiences from the user profile. For the details, each of the elements should be a sentence long. There should be 2-4 elements each for the details.
+For Norm Position, the position identified from the user profile should be formatted in one of these items: [c_striker, l_winger, r_winger, left_mid, center_mid, right_mid, attacking_mid, defensive_mid, left_back, right_back, left_center_back, right_center_back, goalkeeper]
+For the personal statement, please add 500-750 characters.
+For the description under skills, keep the generated text within 50-100 characters. A sentence or two should suffice. 
+Ensure the response contains only the dictionary object as described in the respective step, to avoid causing errors in our system.

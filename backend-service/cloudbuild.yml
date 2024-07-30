@@ -1,0 +1,21 @@
+steps:
+  # Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/skora:$SHORT_SHA', '.']
+
+  # Run the tests within the container image. If pytest fails, this step will fail, stopping the build.
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['run', '--rm', 'gcr.io/$PROJECT_ID/skora:$SHORT_SHA', '/bin/sh', '-c', 'pip install -r requirements.txt && pytest ./tests']
+
+  # Push the image to Google Container Registry
+  # This step will only run if all tests pass
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/skora:$SHORT_SHA']
+
+  # Deploy the image to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args: ['run', 'deploy', 'skora', '--image', 'gcr.io/$PROJECT_ID/skora:$SHORT_SHA', '--region', 'us-west1', '--platform', 'managed']
+
+images:
+  - 'gcr.io/$PROJECT_ID/skora:$SHORT_SHA'

@@ -1,0 +1,921 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
+
+
+:root {
+  --white: white;
+  --black: black;
+}
+
+.container {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.nav-item-wrapper, .nav-logo {
+  transition: opacity 0.5s ease-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.splash {
+  min-height: 100svh;
+  background-image:  url('../images/image-1-p-1080.png');
+  background-position: 0 0;
+  background-size: cover;
+}
+
+.splash-contents {
+  height: 100svh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  display: flex;
+}
+
+.section {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+
+.landing-footer {
+  margin-top: 30px;
+  background-color: #444;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+  gap: 30px;
+  font-family: "Tt Lakes Neue Trial Condensed Bf 641 A 4 C 3494942", sans-serif;
+  font-size: medium;
+
+}
+
+@media screen and (max-width: 600px) {
+  .landing-footer {
+    flex-direction: column;
+  }
+}
+
+.landing-footer-column {
+  max-width: 300px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.landing-footer-column.expand{
+  max-width: 100%;
+  flex: 1;
+}
+
+.nav-wrapper {
+  z-index: 10;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+  display: flex;
+  position: fixed;
+}
+
+.nav-dropdown-wrapper {
+  width: 1200px;
+  max-width: 95vw;
+  align-items: left;
+  margin-top: 15px;
+}
+
+.side-nav-dropdown {
+  align-items: left;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-dropdown {
+  
+  width: 200px;
+  min-height: 20px;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  color: #fff;
+  background-color: rgba(217, 217, 217, .2);
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: start;
+  align-items: left;
+  padding: 15px;
+  display: flex;
+}
+
+.navbar {
+  width: 1200px;
+  max-width: 95vw;
+  min-height: 20px;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  color: #fff;
+  background-color: rgba(217, 217, 217, .2);
+  border-radius: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  display: flex;
+}
+
+.nav-logo {
+  width: 100px;
+}
+
+.nav-text {
+  text-transform: uppercase;
+  align-self: center;
+  font-family: "Tt Lakes Neue Trial Condensed Bf 641 A 4 C 3895280", sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-text.active {
+  color: #444;
+}
+
+.nav-text.orange {
+  color: #ff4100;
+}
+
+.nav-item-wrapper {
+  grid-column-gap: 10px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.heading {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: Syncopate, sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.heading.section-head {
+  color: #444;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.heading.section-head.white {
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 0;
+  line-height: 24px;
+}
+
+.splash-button {
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.button {
+  color: #fff;
+  background-color: #ff4100;
+  border-radius: 13px;
+  flex: 0 auto;
+  padding: 10px 60px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgba(255, 65, 0, .8);
+}
+
+.button.expand {
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+}
+
+.button.expand.hollow {
+  color: #ff4100;
+  background-color: rgba(255, 65, 0, 0);
+  border: 2px solid #ff4100;
+}
+
+
+.button-text {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Tt Lakes Neue Trial Compressed Bf 641 A 4 C 35 B 2 C 8 B", sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+
+
+.mid-section {
+  width: 1200px;
+  max-width: 95vw;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+
+.link-no-style {
+  color: white;
+}
+
+.grid-div {
+  width: 100%;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
+.feature-block {
+  min-height: 200px;
+  background-image: url('../images/joao-ferrao-4YzrcDNcRVg-unsplash.jpg');
+  background-position: 50%;
+  background-size: cover;
+  display: block;
+  grid-area: span 1 / span 2 / span 1 / span 1;
+}
+
+
+.feature-block.small {
+  grid-area: span 1 / span 1 / span 1 / span 2;
+}
+
+
+.feature-block-gradient {
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(36, 36, 36, 0), rgba(119, 119, 119, 0) 0%, #000 100%, #fff);
+  position: relative;
+}
+
+.feature-block-gradient.upper {
+  background-image: linear-gradient(to top, rgba(36, 36, 36, 0), rgba(119, 119, 119, 0) 0%, #000 100%, #fff);
+}
+
+.feature-block-content {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px;
+  display: flex;
+  position: relative;
+}
+
+.feature-block-content.upper {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.feature-block-content-uppertext {
+  color: #fff;
+}
+
+.chat-demo-window {
+  width: 100%;
+  height: 80vh;
+  max-height: 800px;
+  grid-column-gap: 3px;
+  grid-row-gap: 3px;
+  border: 3px solid #eee;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  padding: 20px;
+  display: flex;
+  box-shadow: 0 2px 25px rgba(0, 0, 0, .1);
+}
+
+.chat-text-input-container {
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  display: flex;
+}
+
+.chat-text-input-box {
+  border: 1px solid #eee;
+  border-radius: 35px;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  display: flex;
+  color: #444;
+  font-family: "Tt Lakes Neue Trial Condensed Bf 641 A 4 C 3494942", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.chat-text-input {
+  color: #444;
+  font-family: "Tt Lakes Neue Trial Condensed Bf 641 A 4 C 3494942", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.chat-text-input-box::placeholder {
+  color: grey; 
+}
+
+
+.up-button {
+  width: 50px;
+  height: 50px;
+  color: #ff4100;
+  background-image: linear-gradient(#ff4100, #ff4100);
+  border-radius: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transition: 0.5s;
+}
+
+.up-button:hover {
+  background-image: linear-gradient(#db3700, #db3700);
+}
+
+.image-4 {
+  width: 50%;
+}
+
+.chat-text-bubbles {
+  flex: 1;
+  display: flex;
+  overflow: scroll;
+  padding-bottom: 20px;
+  flex-direction: column;
+}
+
+.bubble-element {
+  z-index: 3;
+  max-width: 45%;
+  background-image: linear-gradient(#fff, #fff);
+  border: 1px solid #eee;
+  border-radius: 34px;
+  margin: 20px 20px 0;
+  padding: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.bubble-element.left {
+  display: inline-block;
+}
+
+.chat-icon {
+  z-index: -1;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+
+.chat-icon.left {
+  left: auto;
+  right: -20px;
+}
+
+.spacer15vh {
+  height: 15vh;
+}
+
+.bubble-wrapper.left {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  display: flex;
+}
+
+.chat-layout {
+  width: 1200px;
+  max-width: 95vw;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* margin-top: 5vh;
+  margin-bottom: 5vh; */
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  display: flex;
+  height: 100svh;
+}
+
+.side-navbar {
+  height: 90vh;
+  min-width: 250px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  flex-direction: column;
+  flex: 0 auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  display: flex;
+}
+
+.side-nav-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  width: 100%;
+}
+.app-window {
+  height: 100%;
+  grid-column-gap: 3px;
+  grid-row-gap: 3px;
+  border-radius: 10px;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: stretch;
+  padding-right: 0;
+  display: block;
+}
+
+
+@media screen and (max-width: 600px) {
+  .chat-layout {
+    flex-direction: column;
+   /* margin-top: 2.5vh;
+   margin-bottom: 10px; */
+   padding-top: 2.5vh;
+   padding-bottom: 2.5vh;
+  }
+
+  .side-navbar {
+    height: auto;
+
+  }
+  .side-nav-options {
+    display: none;
+  }
+  .app-window {
+    height: 80%;
+    padding: 0;
+    margin: 0;
+  }
+  .form-section {
+    max-width: 90vw;
+  }
+  .form-element {
+    max-width: 100%;
+  }
+  .bubble-element {
+    max-width: 80%;
+  }
+  .bubble-element.left {
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+
+
+.center-child {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+}
+
+.side-nav-item {
+  width: 100%;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  color: #8f8f8f;
+  flex-direction: row;
+  display: flex;
+}
+
+.side-nav-icon {
+  height: 20px;
+  max-width: 20px;
+}
+
+.flex-spacer {
+  flex: 1;
+}
+
+.profile-icon {
+  width: 45px;
+  height: 45px;
+  background-color: #ff4100;
+  border-radius: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.profile-icon-initial {
+  color: #fff;
+  font-family: "Tt Lakes Neue Trial Expanded Bf 641 A 4 C 379 Dedd", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.side-nav-profile-wrapper {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.side-nav-profile-popup {
+  z-index: 5;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  background-color: #fff;
+  border: 3px solid #eee;
+  border-radius: 10px;
+  flex-direction: column;
+  padding: 20px;
+  display: none;
+  position: relative;
+  top: 5px;
+  bottom: 00px;
+  left: 0%;
+  right: 0%;
+}
+
+.chat-window {
+  height: 100%;
+  grid-column-gap: 3px;
+  grid-row-gap: 3px;
+  border-radius: 10px;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: stretch;
+  padding-right: 0;
+  display: flex;
+}
+
+.form-section {
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  flex-direction: column;
+  display: flex;
+}
+
+.center-vertical {
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.form-element {
+  width: 350px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  display: flex;
+}
+
+.error-box {
+  width: 300px;
+  color: #ff3c00;
+  background-color: #fff;
+  border: 2px solid #ff3c00;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0, .2);
+}
+
+.error-loading {
+  background-color: #ff3c00;
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden
+}
+
+.error-text {
+  font-family: "Tt Lakes Neue Trial Compressed Bf 641 A 4 C 35 B 2 C 8 B", sans-serif;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.loading-overlay {
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.45);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: auto;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(0deg, rgba(255, 61, 0, 0.2) 33%, #ff3d00 100%);
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  
+}
+
+.loader2 {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #FFF;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg)}
+} 
+
+@keyframes upanddown {
+  0%, 40% { transform: translateY(0); }
+  20% { transform: translateY(10px); }
+}
+
+.image-3 {
+  width: 25px;
+  animation: upanddown 1.5s ease-in-out infinite;
+}
+
+
+.reports-block-single {
+  width: 225px;
+  border: 3px solid #eee;
+  border-radius: 10px;
+}
+
+.reports-block-image {
+  width: 100%;
+}
+
+.reports-block-text-h {
+  color: #444;
+  margin: 5px;
+  font-family: "Tt Lakes Neue Trial Compressed Bf 641 A 4 C 35 B 2 C 8 B", sans-serif;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.reports-block-text {
+  color: #444;
+  margin: 5px;
+  font-family: "Tt Lakes Neue Trial Condensed Bf 641 A 4 C 3494942", sans-serif;
+  font-size: 16px;
+}
+
+.reports-window {
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.reports-blocks {
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  flex-wrap: wrap;
+  flex: 1;
+  align-content: stretch;
+  display: flex;
+  overflow: scroll;
+}
+
+.reports-button {
+  flex: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.reports-grow {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  flex: 1;
+}
+
+
+/** Early Access Page Start **/
+.navbar-copy {
+  width: 1200px;
+  max-width: 95vw;
+  min-height: 20px;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  color: #fff;
+  background-color: rgba(217, 217, 217, .2);
+  border-radius: 10px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  display: flex;
+}
+
+.nav-wrapper-copy {
+  width: 100vw;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+  display: flex;
+  position: fixed;
+}
+
+.nav-logo-copy {
+  width: 100px;
+}
+
+.early-access-block-text {
+  max-width: 500px;
+  align-self: center;
+  padding-bottom: 20px;
+  font-family: "Tt Lakes Neue Trial Condensed Bf 641 A 4 C 3494942", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.chat-text-input-box-earlyaccess {
+  width: 90vw;
+  max-width: 500px;
+  border: 1px solid #eee;
+  border-radius: 35px;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-self: center;
+  align-items: flex-start;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  display: flex;
+}
+
+
+.temp-center {
+  align-self: center;
+  margin-top: 17px;
+}
+
+
+.heading.section-head.centered {
+  align-self: center;
+}
+
+/** Early Access Page End **/
+
+
+
+
+@media screen and (max-width: 479px) {
+  .heading {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .nav-dropdown {
+    width: 95vw;
+  }
+}
+
+#w-node-_558d328d-937e-d690-4b28-1ea1d0580636-d42c7660 {
+  grid-area: span 1 / span 2 / span 1 / span 2;
+}
+
+#w-node-_177b84f2-0344-788a-9f79-5fe0f2e77141-d42c7660, #w-node-_2e248124-f516-462c-5c43-a9de7110028c-d42c7660 {
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
+#w-node-fe98d945-dbec-36a8-f123-0052579f026f-d42c7660 {
+  grid-area: span 1 / span 2 / span 1 / span 2;
+}
+
+
+@font-face {
+  font-family: 'Tt Lakes Neue Trial Condensed Bf 641 A 4 C 3895280';
+  src: url('../fonts/TT-Lakes-Neue-Trial-Condensed-Medium-Italic-BF641a4c3895280.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Tt Lakes Neue Trial Compressed Bf 641 A 4 C 35 B 2 C 8 B';
+  src: url('../fonts/TT-Lakes-Neue-Trial-Compressed-DemiBold-Italic-BF641a4c35b2c8b.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Tt Lakes Neue Trial Condensed Bf 641 A 4 C 3494942';
+  src: url('../fonts/TT-Lakes-Neue-Trial-Condensed-Regular-BF641a4c3494942.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Tt Lakes Neue Trial Expanded Bf 641 A 4 C 379 Dedd';
+  src: url('../fonts/TT-Lakes-Neue-Trial-Expanded-Light-BF641a4c379dedd.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
